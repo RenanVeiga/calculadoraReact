@@ -72,19 +72,19 @@ export class Corpo extends React.Component {
       this.setState({valor1:"", valor2:"", valorFinal: "Error - aperte C"})
       break;
       case 1:
-        this.setState({valor1: (valor1 - valor2).toFixed(4)})
+        this.setState({valor1: (valor1 - valor2)})
       break;
       case 2:
-        this.setState({valor1: (valor1 + valor2).toFixed(4)})
+        this.setState({valor1: (valor1 + valor2)})
       break;
       case 3:
-        this.setState({valor1: (valor1 / valor2).toFixed(4)})
+        this.setState({valor1: (valor1 / valor2)})
       break;
       case 4:
-        this.setState({valor1: (valor1 * valor2).toFixed(4)})
+        this.setState({valor1: (valor1 * valor2)})
       break;
     }
-      this.setState({valor2:"" , cont: 5})
+      this.setState((state)=> {return {valor1: state.valor1.toString() , valor2:"" , cont: 0}})
   }
 
   render() {
@@ -98,9 +98,8 @@ export class Corpo extends React.Component {
             value={
               this.state.cont === 0
                 ? this.state.valor1
-                : this.state.cont !== 5
-                ? this.state.valor2
-                : this.state.valor1
+                : this.state.valor2
+      
             }
             disabled
           />
