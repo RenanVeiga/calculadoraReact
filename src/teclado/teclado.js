@@ -1,4 +1,5 @@
 import React from "react";
+import '../App.css'
 
 export class Teclado extends React.Component {
   render() {
@@ -44,7 +45,7 @@ export class Teclado extends React.Component {
           >
             3
           </button>
-          <button type="button" className="btn btn-primary btn-sm col" onClick={() => this.props.condicional("x")}>
+          <button type="button" className="btn yellow btn-sm col" onClick={() => this.props.condicional("x")}>
             x
           </button>
         </div>
@@ -58,7 +59,7 @@ export class Teclado extends React.Component {
           <button type="button" className="btn btn-primary btn-sm col" onClick={() => this.props.valor("6")}>
             6
           </button>
-          <button type="button" className="btn btn-primary btn-sm col" onClick={()=> this.props.condicional("/")}>
+          <button type="button" className="btn yellow btn-sm col" onClick={()=> this.props.condicional("/")}>
             /
           </button>
         </div>
@@ -72,7 +73,7 @@ export class Teclado extends React.Component {
           <button type="button" className="btn btn-primary btn-sm col" onClick={() => this.props.valor("9")}>
             9
           </button>
-          <button type="button" className="btn btn-primary btn-sm col" onClick={()=> this.props.condicional("+")}>
+          <button type="button" className="btn yellow btn-sm col" onClick={()=> this.props.condicional("+")}>
             +
           </button>
         </div>
@@ -83,7 +84,7 @@ export class Teclado extends React.Component {
           <button type="button" className="btn btn-primary btn-sm col-3" onClick={() => this.props.valor(".")}>
             .
           </button>
-          <button type="button" className="btn btn-primary btn-sm col-3" onClick={()=> this.props.condicional("-")}>
+          <button type="button" className="btn yellow btn-sm col-3" onClick={()=> this.props.condicional("-")}>
             -
           </button>
         </div>
